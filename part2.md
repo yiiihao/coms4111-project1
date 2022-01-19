@@ -62,15 +62,21 @@ Familiarize yourself with the [PostgreSQL documentation](http://www.postgresql.o
 -->
 
 
-* After the installation is completed, connect to our postgres database in one of two ways:
-  * Use [the convenient notebook on colab](https://colab.research.google.com/github/w4111/project1-s22/blob/main/part2.ipynb)
-  * Use `psql`command in your computer's terminal:
+After the installation is completed, connect to our postgres database in one of two ways:
 
-        psql -h w4111.cisxo09blonu.us-east-1.rds.amazonaws.com -U YOUR_UNI w4111
+* Use [the convenient notebook on colab](https://colab.research.google.com/github/w4111/project1-s22/blob/main/part2.ipynb)
+  * You will want to copy the notebook to your google drive if you want to save your work.
+* Use `psql`command in your computer's terminal:
 
-* It will ask for your password, which is included in the e-mail we sent. If you didn't get the message, post a private question on discussion board. You may play with Postgres a little bit before the graded project 1 part 1 is returned to you.
+      psql -h w4111.cisxo09blonu.us-east-1.rds.amazonaws.com -U YOUR_UNI w4111
+
+  * It will ask for your password, which is included in the e-mail we sent. If you didn't get the message, post a private question on discussion board. You may play with Postgres a little bit before the graded project 1 part 1 is returned to you.
+
+Notes
+
 * If the database cannot handle the number of connections, we may create a second database server (we will let you know!)
-* **Don't forget to stop your VM instance after you're done using it or it will use up your credits!!!**
+
+<!-- * **Don't forget to stop your VM instance after you're done using it or it will use up your credits!!!** -->
 
 ### Creating your schema
 
@@ -110,7 +116,7 @@ Each query does not need to include all of those SQL features.
 
 Since you created the database on the course database server, we have access to your database and populated tables, so you are almost done!
 
-Submit a PDF file **via Gradescope** containing:
+Submit **via Gradescope** containing:
 
 * your UNIs;
 * the UNI used to create the schema on the course database server (no need to send your password);
