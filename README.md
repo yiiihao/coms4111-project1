@@ -4,7 +4,9 @@ In Project 1, you will build a substantial real-world database application of yo
 
 * [Part 1](./part1.md): come up with a web application and design the database on paper using ER-modeling.
 * [Part 2](./part2.md): implement your database by translating your model into a database schema and example data.
-* [Part 3](./part3.md): implement an application that accesses and modifies your database.
+* [Part 3](./part3.md): you have two options: (3a) implement a web front-end or (3b) expand your schema design.
+  * 3a: you will implement an application in Python to read and write to the database, through a user-facing web front-end.
+  * 3b: you will sebstantially expand your database design and incorporate it into your database from part 2.  No Python programming is needed.
 
 Pick an application that you will enjoy working with, because you will be working on it for a substantial part of the semester!  
 Try to pick an application that can be populated with real data, since it will make the application more interesting.
