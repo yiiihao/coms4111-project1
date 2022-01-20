@@ -33,7 +33,7 @@ please let the staff know so we can allocate resources appropriately.
 
 ### Getting Started
 
-We have written [extensive instructions](./programming) to help you get set up.
+We have written [extensive instructions](./programming.md) to help you get set up.
 
 
 Your job is to implement your proposed web application.  To help you out,
