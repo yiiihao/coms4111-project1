@@ -12,7 +12,7 @@ These directions are long, but please read them carefully before you start.
 
 * [FAQs](#frequently-asked-questions)
 * [Project overview: Read this carefully before starting](./README)
-* [Staff Approval Meeting Signup](https://calendar.google.com/calendar/embed?src=columbia.edu_99ctsqh4rrpotglkvp4vlia8qs%40group.calendar.google.com&ctz=America%2FNew_York): Meet as a team to discuss the project with an IA or Professor Wu.   We want to make sure the scope is appropriate. You should complete Step 1 before the meeting. 
+* [Staff Approval Meeting Signup](https://calendar.google.com/calendar/u/0/selfsched?sstoken=UUJ4QXlqYUdFOWd3fGRlZmF1bHR8OTY0MGYxMDM2NmZlYmFjY2MyYzg3ODg3YzJjMTgyMjE): Meet as a team to discuss the project with an IA or Professor Wu.   We want to make sure the scope is appropriate. You should complete Step 1 before the meeting. 
   * We will post zoom links for each staff member to use.
 <!--* CVN students still need to meet us for project 1 part 1, the local teammate can represent both of you. For teams that both students are remote, we will use Skype to meet. If you have a large time difference (e.g., singapore) then arrange so that the staff member knows.-->
 
@@ -79,7 +79,7 @@ You will upload your final proposal as a PDF to Gradescope.
     * This 10-15 minute meeting is required.
     * We will have expanded office hours during that week.
     * At least one must attend.  It's much better if both attend.
-    * Bring **two copies** of the written materials for yourself and the staff.
+    * **At least 24 hours before your meeting**, submit a draft version of your materials on Gradescope (ungraded). 
     * **It is a good idea to come earlier in the week.**  If you choose to come later and it is too crowded, then you will be unhappy.
 1. After the meeting, modify the description and E/R diagram based on the feedback.
 1. Map your E/R diagram into a relational schema in SQL, preserving the constraints.
