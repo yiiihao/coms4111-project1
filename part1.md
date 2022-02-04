@@ -12,7 +12,7 @@ These directions are long, but please read them carefully before you start.
 
 * [FAQs](#frequently-asked-questions)
 * [Project overview: Read this carefully before starting](./README)
-* [Staff Approval Meeting Signup](https://calendar.google.com/calendar/u/0/selfsched?sstoken=UUJ4QXlqYUdFOWd3fGRlZmF1bHR8OTY0MGYxMDM2NmZlYmFjY2MyYzg3ODg3YzJjMTgyMjE): Meet as a team to discuss the project with an IA or Professor Wu.   We want to make sure the scope is appropriate. You should complete Step 1 before the meeting. 
+* [Staff Approval Meeting Signup](https://calendar.google.com/calendar/u/0/selfsched?sstoken=UUpOU05mUUpZYXk2fGRlZmF1bHR8YmE0YmE0M2MzNzkyYWZjOTcxYjRkMTBmNDNmNjA1NDc): Meet as a team to discuss the project with an IA or Professor Wu.   We want to make sure the scope is appropriate. You should complete Step 1 before the meeting. 
   * We will post zoom links for each staff member to use.
 <!--* CVN students still need to meet us for project 1 part 1, the local teammate can represent both of you. For teams that both students are remote, we will use Skype to meet. If you have a large time difference (e.g., singapore) then arrange so that the staff member knows.-->
 
