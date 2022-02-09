@@ -1,7 +1,7 @@
 # Project 1, Part 1
 
 * Assigned: 1/28
-* Due: 2/18 10AM, digital copy
+* Due: Meetings by 2/18, final version on Gradescope on 2/25 @ 10 AM
 * 25% of overall Project 1 grade
 
 In Part 1, you will propose a web application to build for the rest of Project 1.  You will design the entity-relationship diagram and schema of the database, and do some setup for Part 2.
