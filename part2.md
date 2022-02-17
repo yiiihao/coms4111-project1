@@ -114,7 +114,7 @@ Each query does not need to include all of those SQL features.
 
 Since you created the database on the course database server, we have access to your database and populated tables, so you are almost done!
 
-Submit **via Gradescope** containing:
+Submit **via Gradescope** a pdf report containing:
 
 * your UNIs;
 * the UNI used to create the schema on the course database server (no need to send your password);
