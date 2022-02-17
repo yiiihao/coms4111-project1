@@ -36,9 +36,7 @@ the project, though the rest of the staff are of course available for questions 
 
 ### Computing Platform
 
-TBA.  We are currently evaluating platforms to find one easy for you to use.
-
-
+We will use Amazon Relational Database Service (RDS).
 
 
 # Procedures
@@ -68,8 +66,8 @@ After the installation is completed, connect to our postgres database in one of 
   * You will want to copy the notebook to your google drive if you want to save your work.
 * Use `psql`command in your computer's terminal:
 
-      psql -h w4111.cisxo09blonu.us-east-1.rds.amazonaws.com -U YOUR_UNI w4111
-
+      psql -h w4111.cisxo09blonu.us-east-1.rds.amazonaws.com -U YOUR_UNI proj1part2
+  * Note that you should connect to proj1part2 database, not w4111! You can check the current database by: `SELECT current_database();`
   * It will ask for your password, which is included in the e-mail we sent. If you didn't get the message, post a private question on discussion board. You may play with Postgres a little bit before the graded project 1 part 1 is returned to you.
 
 Notes
@@ -120,7 +118,8 @@ Submit **via Gradescope** containing:
 
 * your UNIs;
 * the UNI used to create the schema on the course database server (no need to send your password);
-* the 3 interesting queries you created, along with a short description for each of them.
+* the CREATE commands you used to create the SQL tables (make sure they are consistent with your database! you will lose points if not);
+* the 3 interesting queries you created, along with a short description for each of them;
 * descriptions of any changes to the application, data modeling, or schema that you have made since Part 1 of the project.  Remember to have short explanations for why you made those changes.
 
 If you perform any changes to your schema after your Gradescope submission, we will consider it as your new submission date/time. SELECT queries are allowed.
