@@ -116,9 +116,9 @@ Since you created the database on the course database server, we have access to 
 
 Submit **via Gradescope** a pdf report containing:
 
-* your UNIs;
-* the UNI used to create the schema on the course database server (no need to send your password);
-* the CREATE commands you used to create the SQL tables (make sure they are consistent with your database! you will lose points if not);
+* your UNIs, and the UNI used to create the schema on the course database server (no need to send your password);
+* your latest ER diagram;
+* the CREATE commands you used to create the SQL tables. Note that we will mainly grade the SQL schema and implementation in the database, and the CREATE commands here are for reference. Make sure that the CREATE commands are consistent with your database! you will lose points if not.
 * the 3 interesting queries you created, along with a short description for each of them;
 * descriptions of any changes to the application, data modeling, or schema that you have made since Part 1 of the project.  Remember to have short explanations for why you made those changes.
 
@@ -132,7 +132,7 @@ If you perform any changes to your schema after your Gradescope submission, we w
 Grading will be based on the following:
 
 * How well you incorporated your mentor's feedback (important)
-* Quality of the SQL schema and implementation:  how well it conforms with the ER diagram and constraints
+* Quality of the SQL schema and implementation:  how well it conforms with the ER diagram and constraints. **We will mainly grade the SQL schema and implementation in the database!**
 * Your SQL statements: are they reasonable application queries and do they use the SQL features as requested?
 * Quality of the data: is it realistic? 
 
