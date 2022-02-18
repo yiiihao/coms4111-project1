@@ -132,7 +132,7 @@ If you perform any changes to your schema after your Gradescope submission, we w
 Grading will be based on the following:
 
 * How well you incorporated your mentor's feedback (important)
-* Quality of the SQL schema and implementation:  how well it conforms with the ER diagram and constraints. **We will mainly grade the SQL schema and implementation in the database!**
+* Quality of the SQL schema and implementation:  how well it conforms with the ER diagram and constraints. **We will mainly grade the SQL schema and implementation in the database, not the CREATE commands in the report!**
 * Your SQL statements: are they reasonable application queries and do they use the SQL features as requested?
 * Quality of the data: is it realistic? 
 
