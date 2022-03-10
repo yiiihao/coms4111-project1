@@ -18,7 +18,7 @@ You will implement your web application Google Cloud.  You'll be able to share t
 * **2/4**: Find team-mate!
 * **2/7-18**: Meet with course staff to discuss your application and design.  **Mandatory**
 * **2/25**: Submit Part 1
-* **3/21**: Submit Part 2
+* **3/25**: Submit Part 2
 * **4/15**: Submit Part 3
 
 Note: you can only use late days for the project description submisson, not for finding a teammate nor for meeting with the staff. Please read the Project Lateness Policy carefully. 
