@@ -33,16 +33,118 @@ such as git on [GitHub](http://www.github.com), so your team can share code. Thi
 
 
 ### Flask Python Webserver (For part 3)
-
-We will use the [Flask Python webserver](http://flask.pocoo.org/) in this course. It is a lightweight webserver that requires a minimal amount of understanding of how the webserver framework is implemented.
-
-To use it, follow the steps in [Python Flask Skeleton for Google App Engine](https://github.com/GoogleCloudPlatform/appengine-flask-skeleton) to create Python applications using the Flask framework on App Engine.
-
 We strongly recommend reading the following documentations:
 
 * [General Flask Documentation](http://flask.pocoo.org/)
 * [Jinja Templates](http://jinja.pocoo.org/docs/dev/templates/): this makes it easy to send data (e.g., arrays, dictionaries) 
   to your HTML code and dynamically render them.
+
+In part 3, we will deploy our projects on [PythonAnywhere](https://www.pythonanywhere.com/),
+a free and easy-to-use cloud platform that helps us host our website.
+
+Now, we are going to walk you through the process to deploy your 
+project 1 on the platform.
+Suppose we already have a simple Flask application on Github that looks something
+like this.
+```
+COMS4111_Proj1/
+│   README.md
+│   requirements.txt    
+└───webserver/
+    │   server.py
+    └───static
+```
+`requirements.txt` includes all the packages we need for this project and 
+`static` directory is where we store all our static files.
+
+To begin with, we need to create a free beginner account on PythonAnywhere.
+
+After logging in PythonAnywhere, click `$Bash` button under the `New console`.
+A Bash console should pop up.
+
+Now in the command line, type the following command to clone your project on github
+onto the PythonAnywhere.
+```
+git clone <your-github-repo-address>
+```
+You need to enter your github Username and generate a [Personal access tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+to connect to your github and download your project files.
+
+If success, the bash should look something like this.
+
+![image info](./pictures/github_clone.png)
+
+We now need to create a [virtual environment](https://docs.python.org/3/tutorial/venv.html) for our flask application.
+
+Type the following command. Note that if you use a different version of Python for project 1, you
+need to specify that Python version.
+```
+mkvirtualenv <env_name> --python='/usr/bin/python3.9'
+```
+If success, the bash should look something like this.
+![image info](./pictures/virtualenv.png)
+
+We could now use `cd` to move to the root directory of our project. And
+type the following command. This command will automatically help us to install
+all the packages we need in the virtualenv.
+```
+pip install -r requirements.txt
+```
+If success, the bash should look something like this
+![image info](./pictures/pipinstall.png)
+One thing to keep in mind is that PythonAnywhere has some limits on what third-party packages
+we could install on our virtual machine. If you find the `pip install` command fail, please check
+on this [page](https://www.pythonanywhere.com/batteries_included/) to make sure that the third-party
+packages you required are available on PythonAnywhere.
+
+We have set up the virtual environment for our Flask application. Now, we need to make several settings
+on PythonAnywhere to make our project running.
+
+We go back to the dashboard of PythonAnywhere and click on `Open Web tab` button
+under the `All Web apps` title. Press `Add a new web app`. Ignore the advertisement to lure us to bug
+an upgrade plan by clicking `Next`. Select `Manual Configuration`. Select the Python version
+of the project. Click on `Next`. Now you should see a web page like this
+
+
+There are some settings we need to change. 
+
+First, specifying the path to our source code by modifying `Source code` under the `Code` section.
+Path should be in this format:
+
+```/home/<Your-username>/<Root-directory-of-Project>```
+
+![image info](./pictures/srcdir.png)
+
+Second, clicking on that WSGI configuration file on the third row and open it.
+We first delete the lines from 19-47 and uncomment codes under Flask section.
+You WSGI file should look something like this
+![image info](./pictures/wsgi1.png)
+![image info](./pictures/wsgi2.png)
+
+The most important line is line 82. In our application, variable `app` is defined
+inside `server.py` file. If your application define `app` elsewhere, you need to import
+`app` from that specific file.
+
+Third, we need to specify the virtualenv used for our project by entering the name of our
+virtual environment like this.
+![image info](./pictures/ve1.png)
+
+Pressing enter. The final result should looks like this.
+
+![image info](./pictures/ve2.png)
+
+At last, link `/static/` url to our static directory.
+
+![image info](./pictures/static.png)
+
+That will be all! Reload and click on the link at the top. You should see your application
+up and running!
+
+If, unfortunately, your app is not running. One thing you need to do is to check the error log
+to see what's going wrong on the sever and try to fix that. Don't hesitate to reach to TAs
+when you couldn't fix the error!
+
+![image info](./pictures/error.png)
 
 ### A Short Introduction to SQLAlchemy
 
@@ -135,8 +237,11 @@ Some notes
 
 
 ### Running on the virtual machine
+You will deploy your application to PythonAnywhere. Please refer to `Flask Python Webserver` for
+step-by-step instructions on how to do that.
 
-You will deploy your application to your Google App Engine virtual machine.
+<!--
+You will deploy your application to PythonAnywhere.
 
 * [Steps to create an instance from Part2](./gcp_instructions.pdf).
 
@@ -157,7 +262,7 @@ Also, you'll need to open the firewall so you can access your web application. T
 
 5. Go to `http://<IP ADDRESS>:8111/` in your browser to check that it worked.  
    You will need this URL when presenting the project to your mentor.
-
+-->
 
 ### (Optional) Running locally
 
