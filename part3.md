@@ -79,7 +79,7 @@ Please leave your virtual machine running so the IP address does not change (see
 
 Students will present to their project mentor between `4/16` and `4/22`.
 
-Make an appointment with TAs [here](https://calendar.google.com/calendar/selfsched?sstoken=UUlBaFJZbUNvTmp4fGRlZmF1bHR8YzJiMGQ3OTA1NzNmMDY1YjMxYzVlNzQ5OWFjOGM5OTI).
+Make an appointment with TAs here (link to come!).
 
 Contact your mentor immediately if you cannot make it by `4/16`.
 

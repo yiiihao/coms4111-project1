@@ -1,7 +1,7 @@
 # Project 1, Part 1
 
 * Assigned: 1/28
-* Due: 2/18 10AM, digital copy
+* Due: Meetings by 2/18, final version on Gradescope on 2/25 @ 10 AM (**one submission per group, add both group members to Gradescope submission**)
 * 25% of overall Project 1 grade
 
 In Part 1, you will propose a web application to build for the rest of Project 1.  You will design the entity-relationship diagram and schema of the database, and do some setup for Part 2.
@@ -11,7 +11,7 @@ These directions are long, but please read them carefully before you start.
 **Note**: If you observe holidays that overlap with this part of the project, please email the instructor to arrange for alternative deadlines within 2 days of the release date.
 
 * [FAQs](#frequently-asked-questions)
-* [Project overview: Read this carefully before starting](./README)
+* [Project overview: Read this carefully before starting](./README.md)
 * [Staff Approval Meeting Signup](https://calendar.google.com/calendar/u/0/selfsched?sstoken=UUpOU05mUUpZYXk2fGRlZmF1bHR8YmE0YmE0M2MzNzkyYWZjOTcxYjRkMTBmNDNmNjA1NDc): Meet as a team to discuss the project with an IA or Professor Wu.   We want to make sure the scope is appropriate. You should complete Step 1 before the meeting. 
   * We will post zoom links for each staff member to use.
 <!--* CVN students still need to meet us for project 1 part 1, the local teammate can represent both of you. For teams that both students are remote, we will use Skype to meet. If you have a large time difference (e.g., singapore) then arrange so that the staff member knows.-->
