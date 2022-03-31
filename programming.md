@@ -39,11 +39,56 @@ We strongly recommend reading the following documentations:
 * [Jinja Templates](http://jinja.pocoo.org/docs/dev/templates/): this makes it easy to send data (e.g., arrays, dictionaries) 
   to your HTML code and dynamically render them.
 
-In part 3, we will deploy our projects on [PythonAnywhere](https://www.pythonanywhere.com/),
-a free and easy-to-use cloud platform that helps us host our website.
+In part 3, we will deploy our projects on [Google Cloud Platform](https://cloud.google.com/),
+an easy-to-use cloud platform that helps us host our website.
 
+#### Step 1 Google Cloud Coupon
+1. Check if you receive a coupon code from TAs. Everyone should receive individual
+   Google cloud code that provides you with enough credits for the class.
+2. Follow this [link](https://console.cloud.google.com/education) and remember to login with
+your Lionmail account credientials.
+3. Enter your credit code.
+
+#### Step 2 Set Up Virtual Machine on GCP
+1. Go to [Google Cloud Console](console.cloud.google.com)
+2. Click on "Select a project" at the top of the page, and then click on
+"NEW PROJECT" on the right side
+   ![image info](./pictures/new_project.png)
+3. Enter a name for your project (e.g. "cs4111-Project1"), select
+   the "Billing Account for Education" as your billing account and click "CREATE"
+   ![image info](./pictures/create_project.png)
+4. Make sure that the project that you just created is selected on the top navigation bar.
+    ![image info](./pictures/check_project.png)
+5. Click on the menu button in the top left hand corner and select "Compute Engine" and then 
+"VM instances"
+6. Click "CREATE INSTANCE" and enter the name for your virtual machine (e.g. cs4111-instance)
+7. Change "Region" to "us-east1" and change "Zone" to any "us-east1-x"
+![image info](./pictures/vm_set.png)
+8. Click "CHANGE" on Boot disk. Change "Operating System" to "Ubuntu" and
+"Version" to "Ubuntu 20.04 LTS"
+   ![image info](./pictures/os.png)
+9. Change your Firewall settings to allow "HTTP" and "HTTPS" traffic.
+![image info](./pictures/firewall.png)
+10. You should now see your VM instance running. **Remember to stop your VM when
+you don't use them!**
+#### Step 3 Set Up Firewall Rules
+1. Go to VM instances interface, click that three dots menu, and select "View network details"
+![image info](./pictures/network_analysis.png)
+2. Choose "Firewall"
+3. Choose "Create Firewall Rule"
+4. Enter a name, change "Targets" to be "All instances in the network", change
+"Source IPv4 ranges" to `0.0.0.0/0`, select "Specified protocols and ports", and
+   set "tcp" to be `8111`. (Notice that if your application runs on different ports, you should
+   specify those ports here)
+![image info](./pictures/firewall_rules.png)
+5. Click "CREATE"
+6. Make sure your new firewall rule applied to your instance by clicking
+"View network details again" and select "FIREWALL RULES". You should see the
+firewall rule you just created appear there
+   ![image info](./pictures/firewall_appearance.png)
+#### Step 4 Deploy Flask Application on GCP
 Now, we are going to walk you through the process to deploy your 
-project 1 on the platform.
+project 1 on the VM your just created.
 Suppose we already have a simple Flask application on Github that looks something
 like this.
 ```
@@ -57,94 +102,60 @@ COMS4111_Proj1/
 `requirements.txt` includes all the packages we need for this project and 
 `static` directory is where we store all our static files.
 
-To begin with, we need to create a free beginner account on PythonAnywhere.
+1. Click "SSH" to connect to your VM instance
+![image info](./pictures/ssh.png)
 
-After logging in PythonAnywhere, click `$Bash` button under the `New console`.
-A Bash console should pop up.
-
-Now in the command line, type the following command to clone your project on github
+2. Now in the command line, type the following command to clone your project on github
 onto the PythonAnywhere.
 ```
-git clone <your-github-repo-address>
+> git clone <your-github-repo-address>
 ```
-You need to enter your github Username and generate a [Personal access tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
-to connect to your github and download your project files.
+3. You need to enter your github Username and generate a [Personal access tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+to connect to your github and download your project files. If success, the bash should look something like this.
 
-If success, the bash should look something like this.
+![image info](./pictures/clone.png)
 
-![image info](./pictures/github_clone.png)
-
-We now need to create a [virtual environment](https://docs.python.org/3/tutorial/venv.html) for our flask application.
-
-Type the following command. Note that if you use a different version of Python for project 1, you
-need to specify that Python version.
+4. We now need to set up running environment for applications. Type the following commands
+to install `pip` first.
 ```
-mkvirtualenv <env_name> --python='/usr/bin/python3.9'
+> sudo apt-get update
+> sudo apt-get install -y python3-pip
 ```
-If success, the bash should look something like this.
-![image info](./pictures/virtualenv.png)
 
-We could now use `cd` to move to the root directory of our project. And
+5. We could now use `cd` to move to the root directory of our project. And
 type the following command. This command will automatically help us to install
-all the packages we need in the virtualenv.
+all the packages applications needed.
 ```
-pip install -r requirements.txt
+> pip install -r requirements.txt
 ```
 If success, the bash should look something like this
-![image info](./pictures/pipinstall.png)
-One thing to keep in mind is that PythonAnywhere has some limits on what third-party packages
-we could install on our virtual machine. If you find the `pip install` command fail, please check
-on this [page](https://www.pythonanywhere.com/batteries_included/) to make sure that the third-party
-packages you required are available on PythonAnywhere.
 
-We have set up the virtual environment for our Flask application. Now, we need to make several settings
-on PythonAnywhere to make our project running.
+![image info](./pictures/pip.png)
 
-We go back to the dashboard of PythonAnywhere and click on `Open Web tab` button
-under the `All Web apps` title. Press `Add a new web app`. Ignore the advertisement to lure us to bug
-an upgrade plan by clicking `Next`. Select `Manual Configuration`. Select the Python version
-of the project. Click on `Next`. Now you should see a web page like this
+6. We have set up the environment for our Flask application. Your could run your application
+locally by typing the command.
+```
+> python3 server.py
+```
 
+If success, you should see your application running on the port `8111`
 
-There are some settings we need to change. 
+![image info](./pictures/run8111.png)
 
-First, specifying the path to our source code by modifying `Source code` under the `Code` section.
-Path should be in this format:
+Your Flask application is running on virtual machine, but how could we access that?
+You should go back to your instance interface and copy "External IP" of your VM instance. 
+You should be able to access your application by entering `<External IP>:<Network Port>` in your browser. 
+In this example, the external IP is `35.196.145.30` and the running port of the application is
+`8111`. After entering that IP address on your browser, you should see your application is getting
+HTTP requests.
 
-```/home/<Your-username>/<Root-directory-of-Project>```
+![image info](pictures/access_8111.png)
 
-![image info](./pictures/srcdir.png)
-
-Second, clicking on that WSGI configuration file on the third row and open it.
-We first delete the lines from 19-47 and uncomment codes under Flask section.
-You WSGI file should look something like this
-![image info](./pictures/wsgi1.png)
-![image info](./pictures/wsgi2.png)
-
-The most important line is line 82. In our application, variable `app` is defined
-inside `server.py` file. If your application define `app` elsewhere, you need to import
-`app` from that specific file.
-
-Third, we need to specify the virtualenv used for our project by entering the name of our
-virtual environment like this.
-![image info](./pictures/ve1.png)
-
-Pressing enter. The final result should looks like this.
-
-![image info](./pictures/ve2.png)
-
-At last, link `/static/` url to our static directory.
-
-![image info](./pictures/static.png)
-
-That will be all! Reload and click on the link at the top. You should see your application
-up and running!
+That's all! Now is the showtime!
 
 If, unfortunately, your app is not running. One thing you need to do is to check the error log
 to see what's going wrong on the sever and try to fix that. Don't hesitate to reach to TAs
 when you couldn't fix the error!
-
-![image info](./pictures/error.png)
 
 ### A Short Introduction to SQLAlchemy
 
